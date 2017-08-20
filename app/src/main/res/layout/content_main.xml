@@ -52,6 +52,7 @@
 
 
             <Button
+                android:id="@+id/touchBtn"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"

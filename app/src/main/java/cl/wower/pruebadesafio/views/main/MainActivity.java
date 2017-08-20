@@ -10,8 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import cl.wower.pruebadesafio.R;
 import cl.wower.pruebadesafio.models.Post;
@@ -30,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
+
+        Button button = (Button) findViewById(R.id.touchBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Toast.makeText(MainActivity.this, "Te gusta", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
